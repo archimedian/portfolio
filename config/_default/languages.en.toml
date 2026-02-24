@@ -1,0 +1,15 @@
+languageName = "English"
+weight = 1
+title = "Martin Buchert"
+
+[author]
+  name = "Martin Buchert"
+  image = "img/profile.jpg"   # Place author photo at assets/img/profile.jpg
+  headline = "TODO: Headline — e.g. Geospatial Analyst & Conservation Planner"
+  bio = "TODO: One or two sentence bio."
+  links = [
+    { linkedin = "https://www.linkedin.com/in/TODO/" },
+  ]
+
+[params]
+  description = "TODO: Site description for SEO — one sentence."

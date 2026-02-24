@@ -1,0 +1,76 @@
+# Color scheme — selected from Blowfish's built-in named schemes.
+# Custom schemes go in assets/css/schemes/; this value references that filename (minus .css).
+colorScheme = "forest"
+
+# Appearance
+defaultAppearance = "light" # "light" or "dark"
+autoSwitchAppearance = true
+
+# Homepage
+[homepage]
+  layout = "profile"     # Profile layout: author image, headline, bio, social links
+  homepageImage = ""     # Relative to assets/ — set when author photo is available
+  showRecent = false
+  showRecentItems = 0
+  showMoreLink = false
+
+# Header
+[header]
+  layout = "basic"
+
+# Footer
+[footer]
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = false
+  showScrollToTop = true
+
+# Article (single pages)
+[article]
+  showDate = true
+  showDateUpdated = false
+  showAuthor = false
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = false
+  showHeadingAnchors = true
+  showPagination = false
+  showReadingTime = false
+  showRelatedContent = false
+  showTableOfContents = false
+  showTaxonomies = false
+  showWordCount = false
+  sharingLinks = []
+
+# List views
+[list]
+  showBreadcrumbs = false
+  showTableOfContents = false
+  showSummary = true
+  groupByYear = false
+  cardView = true
+  cardViewScreenWidth = false
+
+# Taxonomy
+[taxonomy]
+  showTermCount = true
+  cardView = false
+
+# Term
+[term]
+  groupByYear = false
+  cardView = false
+
+# Site search
+[search]
+  provider = "fuse"
+  fuseResultsCount = 10
+  fuseMinMatchCharLength = 2
+
+# Fathom analytics — leave blank until analytics are configured
+[fathomAnalytics]
+  site = ""
+
+# Verification
+[verification]
+  google = ""

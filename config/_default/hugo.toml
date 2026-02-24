@@ -1,0 +1,10 @@
+baseURL = "https://martinbuchert.com/"
+languageCode = "en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+title = "Martin Buchert"
+theme = "blowfish"
+
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 0

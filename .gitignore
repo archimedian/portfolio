@@ -1,0 +1,9 @@
+# Hugo build output — never committed
+public/
+resources/_gen/
+
+# Hugo module cache
+.hugo_build.lock
+
+# macOS
+.DS_Store

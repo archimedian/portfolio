@@ -1,0 +1,10 @@
+# Required by Blowfish — omitting this file causes unpredictable rendering behavior.
+
+[goldmark]
+  [goldmark.renderer]
+    unsafe = true   # Allow raw HTML in Markdown content
+
+[highlight]
+  noClasses = false
+  style = "github-dark"
+  tabWidth = 2

@@ -1,0 +1,23 @@
+[[main]]
+  identifier = "about"
+  name = "About"
+  pageRef = "about"
+  weight = 10
+
+[[main]]
+  identifier = "projects"
+  name = "Projects"
+  pageRef = "projects"
+  weight = 20
+
+[[main]]
+  identifier = "publications"
+  name = "Publications"
+  pageRef = "publications"
+  weight = 30
+
+[[main]]
+  identifier = "contact"
+  name = "Contact"
+  pageRef = "contact"
+  weight = 40
