@@ -1,0 +1,88 @@
+{{/*
+  layouts/projects/list.html
+
+  Overrides _default/list.html for the projects section only.
+  Groups project cards by the `domain` front matter field in canonical order.
+  Projects with an unrecognized or absent domain fall into an "Other" group at
+  the end. Within each group, cards are sorted newest-first by date.
+
+  Canonical domain order mirrors the order in projects-todo.md:
+    1. Conservation Science
+    2. Urban Ecology
+    3. International Development
+    4. Urban Planning
+    5. Economic Development
+    6. Real Estate Development
+*/}}
+{{ define "main" }}
+  {{ .Scratch.Set "scope" "list" }}
+
+  {{/* Header */}}
+  <header>
+    {{ if .Params.showBreadcrumbs | default (site.Params.list.showBreadcrumbs | default false) }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+    <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      {{ partial "article-meta/list.html" (dict "context" . "scope" "single") }}
+    </div>
+  </header>
+
+  {{/* Section description from _index.md body (if any) */}}
+  {{ with .Content }}
+    <section class="mt-0 prose max-w-full dark:prose-invert mb-10">
+      <div class="min-w-0 min-h-0 max-w-prose w-full">
+        {{ . }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{ $allPages := .Pages }}
+
+  {{ if gt (len $allPages) 0 }}
+
+    {{ $domains := slice
+        "Conservation Science"
+        "Urban Ecology"
+        "International Development"
+        "Urban Planning"
+        "Economic Development"
+        "Real Estate Development" }}
+
+    {{ range $domains }}
+      {{ $domain := . }}
+      {{ $group := where $allPages ".Params.domain" $domain }}
+      {{ if gt (len $group) 0 }}
+        <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+          {{ $domain }}
+        </h2>
+        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {{ range $group.ByDate.Reverse }}
+            {{ partial "article-link/card.html" . }}
+          {{ end }}
+        </section>
+      {{ end }}
+    {{ end }}
+
+    {{/* Projects with an unrecognized or missing domain */}}
+    {{ $ungrouped := where $allPages ".Params.domain" "not in" $domains }}
+    {{ if gt (len $ungrouped) 0 }}
+      <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+        Other
+      </h2>
+      <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        {{ range $ungrouped.ByDate.Reverse }}
+          {{ partial "article-link/card.html" . }}
+        {{ end }}
+      </section>
+    {{ end }}
+
+  {{ else }}
+    <section class="mt-10 prose dark:prose-invert">
+      <p class="py-8 border-t">
+        <em>{{ i18n "list.no_articles" | emojify }}</em>
+      </p>
+    </section>
+  {{ end }}
+
+{{ end }}

@@ -10,9 +10,27 @@ Each project is a page bundle: a directory containing `index.md` and collocated 
 
 ## Front Matter Schema
 
-The schema is finalized. Fields: `title`, `date`, `summary`, `region`, `ecosystem`, `methods` (list), `sector`. Do not rename or add fields without explicit confirmation — changes require updating every file in this section.
+Do not rename or add fields without explicit confirmation — changes require updating every file in this section.
 
-`summary` is used natively by Blowfish in card views (controlled by `showSummary` in `params.toml`). The remaining metadata fields are surfaced in card views via the card partial override at `layouts/partials/article-link/card.html`. On single project pages, metadata is presented in the Markdown body — no template work is required there.
+```yaml
+title: ""
+date: YYYY-MM-DD          # Use first day of the month if only month/year known
+summary: ""               # One sentence; used in card views
+domain: ""                # One of: Conservation Science | Urban Ecology | International Development | Urban Planning | Economic Development | Real Estate Development
+region: ""
+ecosystem: ""             # Omit or leave blank for non-ecological projects
+methods:
+  - ""
+sector: ""                # e.g. Conservation NGO | Academic | Municipal Government | Private Consulting
+era: ""                   # Employer/affiliation shorthand (MLG, UU-GCSC, Hippodameian, Lochner, Patagon, UU-MRC, UH Mānoa, BYU, USU)
+publications:             # List of associated peer-reviewed works; omit section if none
+  - title: ""
+    doi: ""
+roles:                    # Your role(s) on the project
+  - ""
+```
+
+`summary` is used natively by Blowfish in card views (controlled by `showSummary` in `params.toml`). `region`, `ecosystem`, `methods`, and `sector` are surfaced in card views via the card partial override at `layouts/partials/article-link/card.html`. `domain`, `era`, `publications`, and `roles` are presented in the Markdown body on single project pages — no card partial work is needed for those fields yet. On single project pages, all metadata is presented in the Markdown body.
 
 ## Card Partial Override
 
