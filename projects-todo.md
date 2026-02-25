@@ -78,7 +78,7 @@ Any materials Claude Code can read (report path, figures path): Report proprieta
 ```
 
 **Checklist:**
-- [x] Create bundle directory `content/projects/gy-lidar-project/`
+- [x] Create bundle directory `content/projects/gy-lidar-survey/`
 - [x] Write `index.md` with all front matter fields populated; draft body content (Overview, Region & Ecosystem, Methods, Outputs, My Role sections)
 - [ ] Place feature image as `feature.jpg` (or `.png`/`.webp`) in bundle directory
 - [ ] Verify card renders correctly with `hugo server`
