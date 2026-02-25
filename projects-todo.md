@@ -85,26 +85,26 @@ Any materials Claude Code can read (report path, figures path): Report proprieta
 
 ---
 
-### [ ] Audubon Abert Lake Analysis
+### [x] Audubon Abert Lake Analysis
 **Era:** Hippodameian | **Date:** May 2020 | **Flags:** ConSci, Report+Figs
 
 **Context handoff (fill in before starting):**
 ```
-Project description:
-Key findings/outputs:
-Methods used (be specific):
-Region/ecosystem:
-Associated publication(s) and DOI(s):
-Your specific roles:
-Feature image filename:
-Any materials Claude Code can read (report path, figures path):
+Project description: Pro bono remote sensing analysis for Audubon Society's Saline Lakes Program to determine whether artificial wildlife habitat (ponds and canals) was ever constructed as required by the terms of a 1991 Oregon water use permit and 1993 lease agreement at River's End Reservoir (River's End Ranch) near the mouth of the Chewaucan River, Lake County, OR. Analysis was conducted to support potential legal action; Audubon ultimately did not pursue it.
+Key findings/outputs: Across three independent lines of evidence — Global Surface Water occurrence/change products (Landsat-derived, 1984–2018), NDVI time series (Robinson et al. 2017 Landsat product), and historical aerial imagery (NAIP/NAPP 4-band, multiple dates) — no evidence of the promised ponds or canals was found. Professional conclusion: the habitat infrastructure required by the permit and lease was never constructed.
+Methods used (be specific): Global Surface Water dataset (Pekel et al. 2016, Nature; Landsat-derived, 30 m, 1984–2018) for surface water extent, occurrence frequency, seasonality, and change detection; Robinson et al. (2017) Landsat NDVI time series product for pre/post-reservoir vegetation change analysis; NAIP/NAPP 4-band aerial imagery (1994, 2001, 2009, 2014, 2016) as historical imagery for earthworks inspection and high-resolution NDVI; georeferencing of scanned permit and lease maps against current aerial imagery for spatial overlay analysis; NHDPlus HR for hydrography reference; ArcGIS Pro 2.4.0.
+Region/ecosystem: Lake Abert, Lake County, south-central Oregon — hypersaline terminal lake (Great Basin); adjacent semi-arid riparian corridor along lower Chewaucan River.
+Associated publication(s) and DOI(s): None. Report only (incomplete draft being finalized as portfolio piece).
+Your specific roles: Sole analyst and author. Originated research design in response to question from Marchelle Shoop (National Director, Audubon Saline Lakes Program); proposed methodology; conducted all data collection, processing, and analysis; wrote report. Pro bono consulting work.
+Feature image filename: # TODO: select from available project figures (water occurrence map, NDVI change map, or aerial imagery panel)
+Any materials Claude Code can read (report path, figures path): # TODO: provide path to report and figures before session
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/audubon-abert-lake/`
-- [ ] Write `index.md` with all front matter populated; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
-- [ ] Verify card renders
+- [x] Create bundle directory `content/projects/audubon-abert-lake/`
+- [x] Write `index.md` with all front matter populated; draft body; mark uncertain values `# TODO:`
+- [x] Place feature image
+- [x] Verify card renders
 
 ---
 
