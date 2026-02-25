@@ -1,5 +1,5 @@
 ---
-title: "TODO: Publication Title"
+title: "SAMPLE Pub Title"
 year: 2024
 journal: "TODO: Journal Name"
 doi: "TODO: 10.xxxx/xxxxx"
