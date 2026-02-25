@@ -62,24 +62,24 @@ Projects are drawn from the work inventory CSV using these criteria: IsConSci=1,
 
 ## Domain: Conservation Science
 
-### [ ] GY Lidar Project
+### [~] GY Lidar Project
 **Era:** MLG | **Date:** Aug 2024 | **Flags:** ConSci, Report+Figs
 
 **Context handoff (fill in before starting):**
 ```
-Project description:
-Key findings/outputs:
-Methods used (be specific):
-Region/ecosystem:
-Associated publication(s) and DOI(s):
-Your specific roles:
-Feature image filename:
-Any materials Claude Code can read (report path, figures path):
+Project description: National airborne LiDAR + RGB orthoimagery survey (~16,000 km²), GLSC client, UN FAO funded.
+Key findings/outputs: DTM/DSM, orthoimagery mosaic, transportation/hydrography layers, 3D building models, accuracy assessment, reports.
+Methods used (be specific): LiDAR acquisition, RGB orthoimagery, GCP campaign, point cloud classification (LAStools/lidR), DTM/DSM generation, orthoimage mosaicking, feature extraction/digitizing, accuracy assessment, 3D building models, QC workflow.
+Region/ecosystem: Guyana, South America — coastal lowlands through interior tropical forest.
+Associated publication(s) and DOI(s): None.
+Your specific roles: BD lead; report author; remote survey manager; QC workflow designer; subcontractor evaluator; primary GLSC/FAO liaison; GIS trainer.
+Feature image filename: # TODO: select from available project graphics
+Any materials Claude Code can read (report path, figures path): Report proprietary. Figures: provide path before next session.
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/gy-lidar-project/`
-- [ ] Write `index.md` with all front matter fields populated; draft body content (Overview, Region, Ecosystem, Methods, Roles, Outputs sections); mark any uncertain values `# TODO:`
+- [x] Create bundle directory `content/projects/gy-lidar-project/`
+- [x] Write `index.md` with all front matter fields populated; draft body content (Overview, Region & Ecosystem, Methods, Outputs, My Role sections)
 - [ ] Place feature image as `feature.jpg` (or `.png`/`.webp`) in bundle directory
 - [ ] Verify card renders correctly with `hugo server`
 
