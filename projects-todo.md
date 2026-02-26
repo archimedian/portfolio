@@ -201,7 +201,7 @@ Any materials Claude Code can read: # TODO: provide report path if available bef
 
 ---
 
-### [ ] Península Valdés Right Whale Sightings
+### [x] Península Valdés Right Whale Sightings
 **Era:** UU-GLSC | **Date:** Jul 2017 | **Flags:** ConSci, Manual
 
 **Context handoff (fill in before starting):**
@@ -212,15 +212,15 @@ Methods used (be specific): ArcGIS Desktop 10.5 for all GIS processing; bathymet
 Region/ecosystem: Península Valdés, Patagonia, Argentina — Golfo Nuevo, Golfo San José, and adjacent coastal waters; critical breeding and nursery habitat for Southern right whales (Eubalaena australis).
 Associated publication(s) and DOI(s): None.
 Your specific roles: Project lead. Designed GIS data model and digitization workflow; developed geodatabase; manually digitized bathymetric contour centerline and 1997 sightings data; georeferenced historical base-map; recruited and coordinated volunteer GIS technicians; developed digitization protocol and training tutorial.
-Feature image filename: # TODO: identify suitable map output for card image.
+Feature image filename: feature.png (satellite imagery of Península Valdés showing Golfo Nuevo and Golfo San José).
 Any materials Claude Code can read: No report or figures available; only informal email exchanges.
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/valdes-right-whale/`
-- [ ] Write `index.md`; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
-- [ ] Verify card renders
+- [x] Create bundle directory `content/projects/valdes-right-whale/`
+- [x] Write `index.md`; draft body; mark uncertain values `# TODO:`
+- [x] Place feature image
+- [x] Verify card renders
 
 ---
 
