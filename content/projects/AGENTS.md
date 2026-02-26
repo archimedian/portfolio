@@ -22,7 +22,7 @@ ecosystem: ""             # Omit or leave blank for non-ecological projects
 methods:
   - ""
 sector: ""                # e.g. Conservation NGO | Academic | Municipal Government | Private Consulting
-era: ""                   # Employer/affiliation shorthand (MLG, UU-GCSC, Hippodameian, Lochner, Patagon, UU-MRC, UH Mānoa, BYU, USU)
+era: ""                   # Employer/affiliation shorthand (MLG, UU-GCSC, UU-GLSC, Hippodameian, Lochner, Patagon, UU-MRC, UH Mānoa, BYU, USU)
 publications:             # List of associated peer-reviewed works; omit section if none
   - title: ""
     doi: ""

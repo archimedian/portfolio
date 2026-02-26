@@ -359,23 +359,23 @@ Any materials Claude Code can read:
 ## Domain: Urban Ecology
 
 ### [ ] Hydrology from Future Land Use Change
-**Era:** UU-GCSC | **Date:** Aug 2019 | **Flags:** PeerPub, Report+Figs
+**Era:** UU-GCSC | **Date:** Nov 2016 | **Flags:** PeerPub, Report+Figs
 
 **Context handoff (fill in before starting):**
 ```
-Project description:
-Key findings/outputs:
-Methods used:
-Region/ecosystem:
-Journal and DOI:
-Your specific roles:
-Feature image filename:
-Any materials Claude Code can read:
+Project description: Scenario-based hydrological modeling study examining the combined impact of future climate change and urban LULC change on streamflow and sediment yield in the Jordan River watershed, Salt Lake County, Utah. Used HSPF with dynamically and statistically downscaled climate projections and two contrasting 2040 LULC scenarios to simulate streamflow and sediment load at two sites (Big Cottonwood Canyon mouth; Jordan River above Surplus Canal) for the 2040s and 2090s. Part of the NSF-funded iUTAH consortium.
+Key findings/outputs: Mean annual streamflow projected to increase 11–15% by mid-century and 7–15% by late-century; snowmelt timing shifting 4–8 weeks earlier. Sediment load increases 7% (mid-century, canyon) to 40% (late-century, canyon). Climate change is the dominant driver; LULC scenario choice has negligible effect on watershed-scale hydrological outcomes relative to climate change — BUG scenario produces 65 km² new impervious surface vs. only 10 km² under COG (6:1 ratio), yet this contrast does not translate into a detectable difference in modeled streamflow or sediment load.
+Methods used (be specific): HSPF v12 (EPA BASINS 4.1); dynamical downscaling via WRF at 4 km resolution (RCP 6.0, 2035–2044 and 2085–2094); statistical downscaling via BCSD from CMIP5 ensemble (231 simulations, 4 RCPs); change-factor bias correction; two future LULC scenarios: (1) BUG — binary logistic regression spatial attraction model (Tian/Ewing, UU MRC) using neighboring LU, transportation accessibility, and GOMB population projections; (2) COG — Wasatch Choice for 2040 via Envision Tomorrow+ sketch-planning tool; parcel-scale impervious cover modeling for both scenarios (Buchert) using per-class EIF lookup (residential: 0.20; commercial/retail/industrial: 0.75) applied to parcel-level LU conversion outputs; sensitivity analysis isolating climate vs. LULC drivers; 50th-percentile timing analysis for streamflow and sediment.
+Region/ecosystem: Jordan River watershed, Salt Lake County, Utah — snowmelt-dominated semiarid mountainous watershed (Wasatch Range headwaters, 1,960–2,607 m) draining through a rapidly urbanizing valley into the Great Salt Lake; Great Basin.
+Journal and DOI: Journal of the American Water Resources Association, 2019. DOI: 10.1111/1752-1688.12803
+Your specific roles: Co-author (4th of 5). Identified and evaluated candidate LULC models; recommended BUG and COG scenarios. Developed and executed parcel-scale impervious cover estimation methodology for both scenarios — the direct HSPF inputs for the LULC component. Assisted in BUG scenario development (led by Ewing/Tian, UU MRC). Assisted in study conceptualization and manuscript writing. Presented at 2016 Salt Lake County Watershed Symposium.
+Feature image filename: Delta_IF_BUG.jpg (Fig. 4b — 2010–2040 change in impervious fraction under BUG scenario)
+Any materials Claude Code can read: PDF at /Users/admin/Library/CloudStorage/GoogleDrive-martinpbuchert@gmail.com/My Drive/0Admin/Employment/Publications/Khatri_etal_2019.pdf; feature image at /Users/admin/Library/CloudStorage/GoogleDrive-martinpbuchert@gmail.com/My Drive/Website - martinbuchert.com/Content/03 UU/Impervious Surface Change/Delta_IF_BUG.jpg
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/hydrology-land-use-change/`
-- [ ] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
+- [x] Create bundle directory `content/projects/hydrology-land-use-change/`
+- [x] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
 - [ ] Place feature image
 - [ ] Verify card renders
 
