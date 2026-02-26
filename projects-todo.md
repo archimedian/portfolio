@@ -131,26 +131,26 @@ Any materials Claude Code can read: PDF at /Users/admin/Library/CloudStorage/Goo
 
 ---
 
-### [ ] LiDAR and Riparian Vegetation Structure
+### [x] LiDAR and Riparian Vegetation Structure
 **Era:** UU-GCSC | **Date:** Apr 2020 | **Flags:** ConSci, PeerPub
 
 **Context handoff (fill in before starting):**
 ```
-Project description:
-Key findings/outputs:
-Methods used (be specific):
-Region/ecosystem:
-Journal and DOI:
-Your specific roles:
-Feature image filename:
-Any materials Claude Code can read:
+Project description: Analysis of 3D riparian vegetation structure and woody species composition along Red Butte Creek, Utah, using airborne LiDAR paired with ground-based field surveys, to evaluate how a rural-to-urban land use gradient and gaining/losing stream hydrology influence riparian forest canopy structure and community composition.
+Key findings/outputs: Urban reaches had higher proportions of introduced species (reaching 100% in lower residential areas) and exceptionally tall trees (>18 m) in older neighborhoods, while natural canyon reaches were dominated by native riparian species. In natural upper-gaining reaches, canopy height was negatively correlated with HAR and was higher on north-facing aspects. Land use transitions — particularly individual landowner decisions — appeared to decouple riparian vegetation structure from stream hydrology in urban reaches.
+Methods used (be specific): Airborne LiDAR (OpenTopography, 2013–2014, 8 returns/m², ~7 cm accuracy); LAStools (lasclassify, lasheight, lascanopy) for point cloud classification and DTM/CHM generation; spike-free CHM (Khosravipour et al. 2016); ArcGIS 10.3.1 for 50×50 m and 10×50 m plot delineation along smoothed stream centerline; Riparian Topography Tools (Dilts 2015) for HAR calculation; stream burning for culvert correction; vegetation metrics: cover (%), average canopy height (m), canopy density for five height intervals (<1.5 m, 1.5–5 m, 5–9 m, 9–18 m, >18 m); field woody species surveys via step-point technique along 23 transects (summer 2016); WIS and native status (USDA PLANTS); GLS mixed-effects regression with spatial covariance structures and VarIdent variance structure (R: nlme, gstat, ape, car).
+Region/ecosystem: Red Butte Creek, Salt Lake City, Utah — semiarid Intermountain West; montane canyon through urban valley, ~700 m elevation gradient; Great Basin.
+Journal and DOI: Ecohydrology, 2020. DOI: 10.1002/eco.2259
+Your specific roles: Co-author (2nd of 4). Acquired and processed airborne LiDAR data; designed and implemented plot delineation workflow in ArcGIS; computed DTM, CHM, and all vegetation structure metrics using LAStools; calculated HAR using Riparian Topography Tools; contributed to research design, manuscript drafting, and review.
+Feature image filename: feature.jpeg (Figure 1 — study area map with land use transitions, hydrologic domains, and field transect locations).
+Any materials Claude Code can read: PDF at /Users/admin/Library/CloudStorage/GoogleDrive-martinpbuchert@gmail.com/My Drive/0Admin/Employment/Publications/Grijseels_etal_2020.pdf
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/lidar-riparian-veg/`
-- [ ] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
-- [ ] Verify card renders
+- [x] Create bundle directory `content/projects/lidar-riparian-veg/`
+- [x] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
+- [x] Place feature image
+- [x] Verify card renders
 
 ---
 
