@@ -108,26 +108,26 @@ Any materials Claude Code can read (report path, figures path): # TODO: provide 
 
 ---
 
-### [ ] Bird NDVI Paper
+### [x] Bird NDVI Paper
 **Era:** Hippodameian | **Date:** Jun 2020 | **Flags:** ConSci, PeerPub, Report+Figs
 
 **Context handoff (fill in before starting):**
 ```
-Project description:
-Key findings/outputs:
-Methods used (be specific):
-Region/ecosystem:
-Journal and DOI:
-Your specific roles:
-Feature image filename:
-Any materials Claude Code can read:
+Project description: Analysis of 15 years of MAPS bird-banding data (1994–2008) from eight riparian sites across Utah to examine how interannual variation in climate and vegetation affects riparian bird communities at the community and population level. Published in Animal Conservation (2021).
+Key findings/outputs: Bird captures and species richness increased in hotter, drier, less-green, and El Niño years, driven largely by an influx of non-riparian species into riparian oases. Population growth rates of ~47% of focal riparian breeding species declined in hotter years, driven by reduced recruitment rather than survival — suggesting warming concentrates bird diversity in riparian corridors while simultaneously undermining demographic performance of the species most dependent on them.
+Methods used (be specific): 15-year MAPS bird-banding dataset; PRISM monthly climate data (tmean, ppt, AN81m, ~4 km); Robinson et al. (2017) Landsat-derived 30 m NDVI product (16-day composites, DOY 129 and 157); Multivariate ENSO Index (NOAA); Python scripting to compute mean values of spatial variables within 5-km buffer of each site; ArcGIS Pro 2.4.0 (Buffer, Zonal Statistics); GLMMs with Poisson errors (lme4); PCoA on Bray-Curtis dissimilarity (vegan); CJS and Pradel CMR models (RMark).
+Region/ecosystem: Utah, USA — arid Intermountain West; perennial riparian corridors across Utah Mountains (north-central, 1777–1936 m) and Southern Deserts (Colorado Plateau, 1041–1550 m).
+Journal and DOI: Animal Conservation, 2021. DOI: 10.1111/acv.12755
+Your specific roles: Co-author (3rd of 8). Helped define research design around NDVI and PRISM datasets. Contributed to phenology analysis informing NDVI observation date selection (DOY 129, 157). Performed all NDVI and climate data processing including Python scripting for spatial variable extraction. Assisted in manuscript drafting and reviewer response strategy.
+Feature image filename: Figure 1 from paper (overview map of eight banding stations with NAIP aerial imagery insets). # TODO: replace with high-resolution original.
+Any materials Claude Code can read: PDF at /Users/admin/Library/CloudStorage/GoogleDrive-martinpbuchert@gmail.com/My Drive/0Admin/Employment/Publications/Neate-Clegg_etal_2021.pdf
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/bird-ndvi/`
-- [ ] Write `index.md`; populate `publications` front matter block with DOI; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
-- [ ] Verify card renders
+- [x] Create bundle directory `content/projects/bird-ndvi/`
+- [x] Write `index.md`; populate `publications` front matter block with DOI; draft body; mark uncertain values `# TODO:`
+- [x] Place feature image
+- [x] Verify card renders
 
 ---
 
