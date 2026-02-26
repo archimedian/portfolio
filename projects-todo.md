@@ -199,6 +199,29 @@ Any materials Claude Code can read:
 
 ---
 
+### [ ] Península Valdés Right Whale Sightings
+**Era:** UU-GLSC | **Date:** Jul 2017 | **Flags:** ConSci, Manual
+
+**Context handoff (fill in before starting):**
+```
+Project description: Collaboration with Dr. Victoria Rowntree, Director, Ocean Alliance Right Whale Program, to digitize into GIS the results of annual aerial surveys of Southern right whales (Eubalaena australis) along Península Valdés, Argentina. Surveys covered 1997–2004 (the period before the program transitioned to electronic data collection); positional data were recorded on paper field maps as distance along coastline, with no perpendicular offset, so positional accuracy of sightings is low relative to GPS-based methods.
+Key findings/outputs: Strategic plan for data model and digitization workflow; geodatabase with mileposted centerline representing the 5–10 fathom bathymetric contour ("whale road") around Golfo Nuevo, Península Valdés, and Golfo San José, digitized from Argentine nautical charts supplied by Dr. Rowntree; georeferenced scan of historical base-map; digitized 1997 sightings dataset; recruitment of undergraduate GIS technician from student pool and graduate-student volunteer via Society for Conservation GIS listserv; digitization protocol and training tutorial for volunteer technicians.
+Methods used (be specific): ArcGIS Desktop 10.5 for all GIS processing; bathymetric contour ("whale road") manually digitized from Argentine nautical charts supplied by Dr. Rowntree; sightings data manually digitized from paper field maps using same nautical chart as base layer; historical base-map georeferenced in ArcGIS.
+Region/ecosystem: Península Valdés, Patagonia, Argentina — Golfo Nuevo, Golfo San José, and adjacent coastal waters; critical breeding and nursery habitat for Southern right whales (Eubalaena australis).
+Associated publication(s) and DOI(s): None.
+Your specific roles: Project lead. Designed GIS data model and digitization workflow; developed geodatabase; manually digitized bathymetric contour centerline and 1997 sightings data; georeferenced historical base-map; recruited and coordinated volunteer GIS technicians; developed digitization protocol and training tutorial.
+Feature image filename: # TODO: identify suitable map output for card image.
+Any materials Claude Code can read: No report or figures available; only informal email exchanges.
+```
+
+**Checklist:**
+- [ ] Create bundle directory `content/projects/valdes-right-whale/`
+- [ ] Write `index.md`; draft body; mark uncertain values `# TODO:`
+- [ ] Place feature image
+- [ ] Verify card renders
+
+---
+
 ### [ ] Russ Norvell Pelican Telemetry
 **Era:** Hippodameian | **Date:** Jul 2018 | **Flags:** ConSci
 
