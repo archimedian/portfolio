@@ -358,7 +358,7 @@ Any materials Claude Code can read:
 
 ## Domain: Urban Ecology
 
-### [ ] Hydrology from Future Land Use Change
+### [x] Hydrology from Future Land Use Change
 **Era:** UU-GCSC | **Date:** Nov 2016 | **Flags:** PeerPub, Report+Figs
 
 **Context handoff (fill in before starting):**
@@ -376,8 +376,8 @@ Any materials Claude Code can read: PDF at /Users/admin/Library/CloudStorage/Goo
 **Checklist:**
 - [x] Create bundle directory `content/projects/hydrology-land-use-change/`
 - [x] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
-- [ ] Verify card renders
+- [x] Place feature image
+- [x] Verify card renders
 
 ---
 
