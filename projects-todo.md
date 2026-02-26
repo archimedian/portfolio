@@ -154,25 +154,26 @@ Any materials Claude Code can read: PDF at /Users/admin/Library/CloudStorage/Goo
 
 ---
 
-### [ ] KCMO Habitat Connectivity
+### [x] KCMO Habitat Connectivity
 **Era:** UU-MRC | **Date:** Sep 2014 | **Flags:** ConSci, Report+Figs
 
 **Context handoff (fill in before starting):**
 ```
-Project description:
-Key findings/outputs:
-Methods used (be specific):
-Region/ecosystem:
-Your specific roles:
-Feature image filename:
-Any materials Claude Code can read:
+Project description: Proof-of-concept demonstration of graph-theory-based habitat connectivity modeling for the Mid-America Regional Council (MARC), leveraging their newly delivered Kansas City Natural Resource Inventory II (NRI) — a 2.5m land cover product derived from multispectral imagery and airborne LiDAR. Part of an omnibus ecosystem services contract with the University of Utah Metropolitan Research Center. The study was explicitly scoped as a demonstration, not a conservation or management plan.
+Key findings/outputs: Habitat patches and functional connectivity networks modeled for two focal species — Western painted turtle (Chrysemys picta bellii) and Eastern meadowlark (Sturnella magna) — using the Probability of Connectivity (PC) index and patch-removal experiments (dPC) to rank patch and link importance. White-tailed deer was dropped after literature review confirmed it is a habitat generalist not amenable to discrete patch modeling. Turtle analysis compared two contrasting HUC12 watersheds (Longview: urbanizing suburban fringe; Freeman: agricultural, less fragmented); the Longview watershed was bisected into isolated network components by I-470/US-50 and I-49, while Freeman patches formed a single fully-connected network. Meadowlark habitat forms a distinctive ring around the KC conurbation squeezed between intense urbanization and intensive agriculture; connectivity is not the limiting factor for this species — total habitat area is. Report concludes with recommendations for incorporating habitat connectivity into MARC's ongoing regional planning work.
+Methods used (be specific): Kansas City NRI II land cover (2.5m, 2012) as primary input; NRI resampled to 10m (turtle) and 20m (meadowlark) for analysis; species-specific habitat reclassification; erode-then-dilate morphological filtering to remove salt-and-pepper artifacts and simplify patch geometry; patch area thresholding (turtle: 0.03–5.9 ha; meadowlark: ≥50 acres); large roadway extraction via erode-then-dilate on impervious surface mask (~4-lane threshold); HUC12 watershed delineation (National Watershed Boundary Dataset) for turtle sub-area analysis; Graphab 1.2 for functional connectivity graph construction and dPC metric computation; Euclidean distance for meadowlark dispersal (literature-supported); least-cost/resistance modeling for turtle; focal species parameterization from primary literature review and expert consultation (Larry Rizzo, Missouri Dept. of Conservation); ArcGIS 10.2 for all spatial processing.
+Region/ecosystem: Nine-county Kansas City metro region (Missouri/Kansas) — tallgrass prairie remnants, freshwater wetlands, urban/suburban fringe, agricultural matrix.
+Associated publication(s) and DOI(s): None. Report only.
+Your specific roles: Sole analyst and author. Designed and executed all methods; conducted species literature review; led expert consultation with Missouri Dept. of Conservation biologist (species selection and habitat requirements); performed all spatial data processing and connectivity modeling; wrote report and recommendations for MARC.
+Feature image filename: feature.jpeg (Figure 13 — MARC-region-wide dPC for patches and links, meadowlark model).
+Any materials Claude Code can read: Report at # TODO: provide local path before session.
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/kcmo-habitat-connectivity/`
-- [ ] Write `index.md`; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
-- [ ] Verify card renders
+- [x] Create bundle directory `content/projects/kcmo-habitat-connectivity/`
+- [x] Write `index.md`; draft body; mark uncertain values `# TODO:`
+- [x] Place feature image
+- [x] Verify card renders
 
 ---
 
