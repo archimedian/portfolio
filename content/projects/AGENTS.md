@@ -6,7 +6,7 @@ Read this after the root AGENTS.md. This file covers decisions specific to the p
 
 ## Structure
 
-Each project is a page bundle: a directory containing `index.md` and collocated assets (photographs, feature image). This structure is required — Blowfish's thumbnail system detects images named `feature.*` within the bundle and uses them as card thumbnails automatically. Flat files will not get thumbnails.
+Each project is a page bundle: a directory containing `index.md`. Feature images are **not** collocated in the bundle — they live in the global assets pipeline at `assets/images/projects/<slug>/feature.<ext>` and are referenced via the `featureimage` front matter field (see schema below). This is required for Hugo Pipes image optimization to apply.
 
 ## Front Matter Schema
 
@@ -23,6 +23,7 @@ methods:
   - ""
 sector: ""                # e.g. Conservation NGO | Academic | Municipal Government | Private Consulting
 era: ""                   # Employer/affiliation shorthand (MLG, UU-GCSC, UU-GLSC, Hippodameian, Lochner, Patagon, UU-MRC, UH Mānoa, BYU, USU)
+featureimage: ""          # Path relative to assets/; e.g. "images/projects/<slug>/feature.jpg"
 publications:             # List of associated peer-reviewed works; omit section if none
   - title: ""
     doi: ""
@@ -38,8 +39,23 @@ The override at `layouts/partials/article-link/card.html` (project root) adds `r
 
 ## Feature Images
 
-Place the cover photograph as `feature.jpg` (or `feature.png`, `feature.webp`) directly inside the project bundle directory alongside `index.md`. The filename must match the `feature.*` glob — Blowfish picks it up automatically without any front matter reference.
+Feature images live in the global Hugo assets pipeline, **not** inside the page bundle. The canonical location is:
+
+```
+assets/images/projects/<project-slug>/feature.<ext>
+```
+
+Reference the image in front matter via the `featureimage` field with a path relative to `assets/`:
+
+```yaml
+featureimage: "images/projects/kcmo-habitat-connectivity/feature.jpeg"
+```
+
+Blowfish resolves this via `resources.Get`, which applies Hugo Pipes image optimization (resizing) automatically. Supported extensions: `.jpg`, `.jpeg`, `.png`, `.webp`. Do not place feature images inside the bundle directory — they will not be found by the `featureimage` front matter path and the bundle's `.Resources` lookup is no longer used.
 
 ## Adding a New Project
 
-Create a new directory under `content/projects/`, add `index.md` with all front matter fields populated (no TODOs left), and add the feature image. Do not create content with placeholder values for production entries; TODOs are for structural stubs only.
+1. Create a new directory under `content/projects/` containing only `index.md`.
+2. Place the feature image at `assets/images/projects/<slug>/feature.<ext>`.
+3. Set `featureimage: "images/projects/<slug>/feature.<ext>"` in the front matter.
+4. Populate all front matter fields (no TODOs left for production entries).

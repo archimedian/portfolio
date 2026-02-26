@@ -13,6 +13,7 @@ methods:
   - "Geodatabase design and mileposting"
 sector: "Academic"
 era: "UU-GLSC"
+featureimage: "images/projects/valdes-right-whale/feature.png"
 roles:
   - "Project lead"
   - "GIS data model design and geodatabase development"

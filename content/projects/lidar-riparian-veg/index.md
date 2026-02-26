@@ -16,6 +16,7 @@ methods:
   - "GLS mixed-effects regression with spatial covariance structures (R: nlme, gstat, ape, car)"
 sector: "Academic"
 era: "UU-GCSC"
+featureimage: "images/projects/lidar-riparian-veg/feature.jpeg"
 publications:
   - title: "Using LiDAR to assess transitions in riparian vegetation structure along a rural-to-urban land use gradient in western North America"
     doi: "10.1002/eco.2259"

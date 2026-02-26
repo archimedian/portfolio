@@ -17,6 +17,7 @@ methods:
   - "ArcGIS 10.2 for all spatial processing"
 sector: "Regional Government"
 era: "UU-MRC"
+featureimage: "images/projects/kcmo-habitat-connectivity/feature.jpeg"
 roles:
   - "Sole analyst and report author"
   - "Analytical design and all spatial data processing"

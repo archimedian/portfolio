@@ -15,6 +15,7 @@ methods:
   - "3D building model production"
 sector: "Government"
 era: "MLG"
+featureimage: "images/projects/gy-lidar-survey/feature.png"
 roles:
   - "Business development lead"
   - "Report author (inception, all monthly interim reports, final deliverable)"

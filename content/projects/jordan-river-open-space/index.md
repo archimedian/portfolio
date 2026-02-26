@@ -16,6 +16,7 @@ methods:
   - "ArcGIS Desktop 10.3.1"
 sector: "Regional Government"
 era: "Hippodameian"
+featureimage: "images/projects/jordan-river-open-space/feature.jpeg"
 roles:
   - "Research design lead"
   - "Sole GIS analyst"

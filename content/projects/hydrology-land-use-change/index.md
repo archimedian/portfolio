@@ -17,6 +17,7 @@ methods:
   - "50th-percentile timing analysis for streamflow and sediment load"
 sector: "Academic"
 era: "UU-GCSC"
+featureimage: "images/projects/hydrology-land-use-change/feature.jpg"
 publications:
   - title: "Impact of Climate and Land Use Change on Streamflow and Sediment Yield in a Snow-Dominated Semiarid Mountainous Watershed"
     doi: "10.1111/1752-1688.12803"

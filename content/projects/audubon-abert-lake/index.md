@@ -13,6 +13,7 @@ methods:
   - "NHDPlus HR hydrography reference"
 sector: "Conservation NGO"
 era: "Hippodameian"
+featureimage: "images/projects/audubon-abert-lake/feature.jpg"
 roles:
   - "Sole analyst and report author"
   - "Research design and methodology"

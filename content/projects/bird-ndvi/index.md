@@ -15,6 +15,7 @@ methods:
   - "Capture-mark-recapture models (CJS and Pradel)"
 sector: "Academic"
 era: "Hippodameian"
+featureimage: "images/projects/bird-ndvi/feature.jpg"
 publications:
   - title: "The effects of climate change and fluctuations on the riparian bird communities of the arid Intermountain West"
     doi: "10.1111/acv.12755"
