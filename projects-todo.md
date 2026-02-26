@@ -177,25 +177,27 @@ Any materials Claude Code can read: Report at # TODO: provide local path before 
 
 ---
 
-### [ ] Jordan River Open Space Inventory
+### [x] Jordan River Open Space Inventory
 **Era:** Hippodameian | **Date:** Feb 2016 | **Flags:** ConSci
 
 **Context handoff (fill in before starting):**
 ```
-Project description:
-Key findings/outputs:
-Methods used (be specific):
-Region/ecosystem:
-Your specific roles:
-Feature image filename:
-Any materials Claude Code can read:
+Project description: Conservation prioritization and gap analysis for the Jordan River Commission identifying open-space-compatible parcels within a 1-mile buffer of the Jordan River centerline in Salt Lake County. Designed to guide future land acquisition and inform permitting decisions along the corridor.
+Key findings/outputs: Standardized crosswalk of zoning classifications from all 12 SLCo municipalities within the AOI, enabling uniform classification of parcels by open-space compatibility; reclassification of SLCo Assessor ownership codes into a binary private/public typology; geodatabase of cleaned SLCo parcel features within 1-mile buffer, each coded Y/N on three dimensions: zoned as open space, protected by conservation easement, publicly owned; map series representing parcels by ownership/easement/zoning status, federal flood zone classification, and Utah State water-related land use classification. Adopted by three stakeholder organizations: Jordan River Commission Technical Advisory Committee (general reference), Salt Lake County Open Space Trust (land acquisition guidance), and Utah Division of Forestry Fire and State Lands (informed Jordan River classification decisions in their Comprehensive Management Plan).
+Methods used (be specific): 1-mile buffer around Jordan River centerline (NHDPlus v2, USGS); parcel features from UGRC statewide parcel layer; ownership typology from SLCo Assessor data, reclassified to private/public binary; conservation easements from National Conservation Easement Database; water-related land use from UGRC (State of Utah); municipal zoning data obtained directly from 12 SLCo municipal GIS departments; manual review and crosswalk of all 12 zoning schemas to unified open-space-compatible classification; AOI scoped to SLCo parcels only (Davis and Utah County excluded); ArcGIS Desktop 10.3.1.
+Region/ecosystem: Jordan River corridor, Salt Lake County, Utah — urban riparian corridor.
+Associated publication(s) and DOI(s): None. Report and geodatabase only.
+Your specific roles: Research design lead (in collaboration with client); sole GIS analyst; led team of University of Utah Urban Planning graduate students in zoning crosswalk development; primary client liaison (Jordan River Commission Executive Director Laura Hanson). Paid Hippodameian contract.
+Client impact: Per email from Laura Hanson (Jordan River Commission Executive Director), April 5, 2016, the JROSI database was in active use by three organizations: (1) Jordan River Commission Technical Advisory Committee — general reference; (2) Salt Lake County Open Space Trust — guiding discussions about future land acquisitions along the river; (3) Utah Division of Forestry Fire and State Lands — informed decision-making on proposed Jordan River classifications in their Comprehensive Management Plan, specifically directing the agency on whether to approve future permit applications for new structures in the river. Quote available for use in page body.
+Feature image filename: JROSI-feature.jpeg
+Any materials Claude Code can read: # TODO: provide report path if available before session
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/jordan-river-open-space/`
-- [ ] Write `index.md`; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
-- [ ] Verify card renders
+- [x] Create bundle directory `content/projects/jordan-river-open-space/`
+- [x] Write `index.md`; draft body; mark uncertain values `# TODO:`
+- [x] Place feature image
+- [x] Verify card renders
 
 ---
 
