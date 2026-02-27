@@ -381,7 +381,7 @@ Any materials Claude Code can read: PDF at /Users/admin/Library/CloudStorage/Goo
 
 ---
 
-### [ ] Modeling UTA Transit Emissions
+### [x] Modeling UTA Transit Emissions
 **Era:** UU-GCSC | **Date:** May 2019 | **Flags:** PeerPub, Report+Figs
 
 **Context handoff (fill in before starting):**
@@ -397,10 +397,10 @@ Any materials Claude Code can read:
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/uta-transit-emissions/`
-- [ ] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
-- [ ] Verify card renders
+- [x] Create bundle directory `content/projects/uta-transit-emissions/`
+- [x] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
+- [x] Place feature image
+- [x] Verify card renders
 
 ---
 
