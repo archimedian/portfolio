@@ -473,8 +473,8 @@ Any materials Claude Code can read:
 
 ---
 
-### [ ] Hestia SLC 2010
-**Era:** UU-GCSC | **Date:** Mar 2016 | **Flags:** PeerPub, Report+Figs
+### [x] Hestia SLC 2010
+**Era:** UU-GCSC | **Date:** Sep 2016 | **Flags:** PeerPub, Report+Figs
 
 **Context handoff (fill in before starting):**
 ```
@@ -489,10 +489,10 @@ Any materials Claude Code can read:
 ```
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/hestia-slc-2010/`
-- [ ] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
-- [ ] Verify card renders
+- [x] Create bundle directory `content/projects/hestia-slc-2010/`
+- [x] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
+- [x] Place feature image
+- [x] Verify card renders
 
 ---
 
