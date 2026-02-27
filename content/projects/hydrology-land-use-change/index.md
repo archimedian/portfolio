@@ -4,6 +4,7 @@ date: 2016-11-01
 summary: "Scenario-based hydrological modeling study using HSPF to simulate streamflow and sediment yield in the snowmelt-dominated Jordan River watershed under future climate and LULC change — finding that climate change overwhelms any difference between business-as-usual and smart-growth development patterns as a driver of watershed-scale hydrology."
 domain:
   - "Urban Ecology"
+  - "Urban Planning"
 region: "Jordan River watershed, Salt Lake County, Utah, USA"
 ecosystem: "Snowmelt-dominated semiarid mountainous watershed; Wasatch Range headwaters draining through a rapidly urbanizing valley to the Great Salt Lake; Great Basin"
 methods:

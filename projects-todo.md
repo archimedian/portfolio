@@ -874,6 +874,26 @@ These structural tasks should be done once, either before or after the project p
 
 The existing card override at `layouts/partials/article-link/card.html` surfaces `region`, `ecosystem`, `methods`, and `sector`. Add `domain`, `era`, and `roles` display as needed. The `publications` field does not need to appear on cards.
 
+### [ ] Implement per-domain project pages via Hugo taxonomy
+
+**Decision recorded:** Cross-listing projects across multiple domains creates a double-showing problem on the current single grouped page. Per-domain pages solve this: a project appearing under both Conservation Science and Urban Planning signals "this work spanned two areas" rather than looking like a duplication error. Per-domain pages also serve different audiences better — a conservation client navigates directly to relevant work without scrolling past transit emissions and real estate analysis.
+
+**Chosen approach:** Hugo taxonomy system
+- Declare `domain` as a taxonomy in `hugo.toml`
+- Hugo auto-generates per-domain listing pages from existing front matter (no data migration needed — front matter is already a YAML list)
+- Create `layouts/taxonomy/domain.html` for the per-domain card grid (reuse existing card partial)
+- Rework `/projects/` from a flat grouped list into a domain hub page (domain tiles → per-domain pages)
+- Single "Projects" nav link pointing to the hub
+- Note: Hugo places taxonomy pages at `/domain/conservation-science/` by default; use `permalinks` config to nest under `/projects/domain/` if preferred
+
+**Why not other options:**
+- Single grouped page with cross-listing: same project appearing twice looks like a bug, not a feature
+- JS client-side filtering: not idiomatic for a static Hugo site
+
+**Prerequisites:** None — front matter is already correctly structured. Implement once the project set is substantially built out.
+
+---
+
 ### [x] Implement domain grouping on the Projects listing page
 
 The default Blowfish list view does not group by a custom front matter field. A list template override at `layouts/projects/list.html` is needed to group cards by `domain` in this order:

@@ -4,6 +4,7 @@ date: 2014-09-01
 summary: "Proof-of-concept habitat connectivity analysis for the Mid-America Regional Council using the Kansas City NRI II land cover product, modeling functional patch networks and importance rankings for Western painted turtle and Eastern meadowlark — finding that highway infrastructure has fragmented turtle connectivity in the urbanizing suburban fringe, while meadowlark habitat forms a distinctive ring around the conurbation where total area, not connectivity, is the binding constraint."
 domain:
   - "Conservation Science"
+  - "Urban Planning"
 region: "Kansas City metropolitan region, Missouri/Kansas, USA"
 ecosystem: "Tallgrass prairie remnants, freshwater wetlands, urban/suburban fringe, agricultural matrix"
 methods:

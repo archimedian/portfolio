@@ -4,6 +4,7 @@ date: 2019-05-16
 summary: "First study to model net VMT, fuel consumption, CO₂, and criteria air pollutant impacts of an entire US transit system at hourly and city-block spatial resolution, combining UTA's electronic fare collection and automated passenger counter data with GTFS service schedules — finding that UTA collectively offsets ~1.5% of seven-county onroad emissions, with strong spatial and temporal heterogeneity by mode, time of day, and season."
 domain:
   - "Urban Ecology"
+  - "Urban Planning"
 region: "Wasatch Front, Utah (Salt Lake, Davis, Weber, Utah, and adjacent counties); Salt Lake Valley airshed"
 ecosystem: ""
 methods:
