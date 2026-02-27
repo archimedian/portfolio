@@ -2,7 +2,8 @@
 title: "Jordan River Open Space Inventory — Salt Lake County Conservation Prioritization and Gap Analysis"
 date: 2016-02-01
 summary: "Parcel-level conservation prioritization and gap analysis for the Jordan River Commission, producing a geodatabase of all Salt Lake County parcels within a 1-mile corridor coded by open-space zoning, conservation easement, and public ownership status — subsequently adopted by three stakeholder organizations for land acquisition planning and regulatory decision-making."
-domain: "Conservation Science"
+domain:
+  - "Conservation Science"
 region: "Salt Lake County, Utah, USA"
 ecosystem: "Urban riparian corridor (Jordan River)"
 methods:

@@ -2,7 +2,8 @@
 title: "The Effects of Climate Change and Fluctuations on the Riparian Bird Communities of the Arid Intermountain West"
 date: 2020-06-01
 summary: "Analysis of 15 years of MAPS bird-banding data from eight Utah riparian sites showing that hotter, drier years concentrate greater bird diversity in riparian corridors while simultaneously depressing population growth rates in the breeding species most dependent on them."
-domain: "Conservation Science"
+domain:
+  - "Conservation Science"
 region: "Utah, USA"
 ecosystem: "Semi-arid riparian corridors, Intermountain West"
 methods:

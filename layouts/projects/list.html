@@ -3,8 +3,9 @@
 
   Overrides _default/list.html for the projects section only.
   Groups project cards by the `domain` front matter field in canonical order.
-  Projects with an unrecognized or absent domain fall into an "Other" group at
-  the end. Within each group, cards are sorted newest-first by date.
+  `domain` is always a YAML list; multi-domain projects appear under each
+  matching heading. Projects with no recognized domain fall into an "Other"
+  group at the end. Within each group, cards are sorted newest-first by date.
 
   Canonical domain order mirrors the order in projects-todo.md:
     1. Conservation Science
@@ -51,7 +52,7 @@
 
     {{ range $domains }}
       {{ $domain := . }}
-      {{ $group := where $allPages ".Params.domain" $domain }}
+      {{ $group := where $allPages ".Params.domain" "intersect" (slice $domain) }}
       {{ if gt (len $group) 0 }}
         <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
           {{ $domain }}
@@ -64,8 +65,9 @@
       {{ end }}
     {{ end }}
 
-    {{/* Projects with an unrecognized or missing domain */}}
-    {{ $ungrouped := where $allPages ".Params.domain" "not in" $domains }}
+    {{/* Projects with no recognized domain — complement of all grouped pages */}}
+    {{ $recognized := where $allPages ".Params.domain" "intersect" $domains }}
+    {{ $ungrouped := $allPages | complement $recognized }}
     {{ if gt (len $ungrouped) 0 }}
       <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
         Other

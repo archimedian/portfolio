@@ -2,7 +2,8 @@
 title: "GIS Digitization of Historical Aerial Survey Data — Southern Right Whales, Península Valdés"
 date: 2017-07-01
 summary: "Collaboration with Ocean Alliance's Right Whale Program to digitize eight years of analog aerial survey sightings of Eubalaena australis into GIS, including a mileposted bathymetric centerline representing the whales' preferred coastal corridor around Golfo Nuevo, Península Valdés, and Golfo San José."
-domain: "Conservation Science"
+domain:
+  - "Conservation Science"
 region: "Península Valdés, Patagonia, Argentina"
 ecosystem: "Coastal marine; critical breeding and nursery habitat for Southern right whales (Eubalaena australis)"
 methods:

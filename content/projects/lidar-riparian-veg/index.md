@@ -2,7 +2,8 @@
 title: "Using LiDAR to Assess Transitions in Riparian Vegetation Structure along a Rural-to-Urban Land Use Gradient in Western North America"
 date: 2020-04-01
 summary: "LiDAR and field-based study of riparian forest structure along Red Butte Creek, Utah, finding that land use transitions — especially individual landowner decisions — decouple urban riparian vegetation from stream hydrology, producing exceptionally tall canopies in older residential reaches while native species dominate the protected canyon upstream."
-domain: "Conservation Science"
+domain:
+  - "Conservation Science"
 region: "Salt Lake City, Utah, USA"
 ecosystem: "Semiarid riparian corridor; montane canyon through urban valley, Great Basin"
 methods:

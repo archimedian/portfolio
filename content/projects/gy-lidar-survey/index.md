@@ -2,7 +2,8 @@
 title: "Airborne LiDAR & Orthoimagery Survey — Guyana"
 date: 2024-08-01
 summary: "National airborne LiDAR and RGB orthoimagery campaign covering ~16,000 km² of Guyana, producing DTM/DSM, orthoimagery mosaics, and updated national base-map layers for the Guyana Lands and Surveys Commission."
-domain: "Conservation Science"
+domain:
+  - "Conservation Science"
 region: "Guyana, South America"
 ecosystem: "Coastal lowlands and interior tropical forest"
 methods:

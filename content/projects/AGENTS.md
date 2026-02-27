@@ -16,7 +16,8 @@ Do not rename or add fields without explicit confirmation — changes require up
 title: ""
 date: YYYY-MM-DD          # Use first day of the month if only month/year known
 summary: ""               # One sentence; used in card views
-domain: ""                # One of: Conservation Science | Urban Ecology | International Development | Urban Planning | Economic Development | Real Estate Development
+domain:                   # One or more of: Conservation Science | Urban Ecology | International Development | Urban Planning | Economic Development | Real Estate Development
+  - ""
 region: ""
 ecosystem: ""             # Omit or leave blank for non-ecological projects
 methods:

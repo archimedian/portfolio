@@ -2,7 +2,8 @@
 title: "Remote Sensing Analysis of Habitat Construction Compliance — River's End Reservoir"
 date: 2020-05-01
 summary: "Multi-source remote sensing analysis for the Audubon Society's Saline Lakes Program to determine whether artificial wildlife habitat required by a 1991 Oregon water use permit was ever constructed at River's End Reservoir on the lower Chewaucan River."
-domain: "Conservation Science"
+domain:
+  - "Conservation Science"
 region: "Lake County, Oregon, USA"
 ecosystem: "Hypersaline terminal lake (Great Basin); semi-arid riparian corridor"
 methods:
