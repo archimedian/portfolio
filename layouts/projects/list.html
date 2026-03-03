@@ -67,8 +67,9 @@
     {{ range $domains }}
       {{ $pages := index $domainTax (strings.ToLower .name) }}
       {{ $count := len $pages }}
-      {{ if gt $count 0 }}
-        <a href="{{ printf "/projects/domain/%s/" .slug | relURL }}"
+      {{ $termPage := site.GetPage (printf "/domain/%s" .slug) }}
+      {{ if and (gt $count 0) $termPage }}
+        <a href="{{ $termPage.RelPermalink }}"
            class="group block rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-6 hover:border-primary-500 dark:hover:border-primary-400 transition-colors no-underline">
           <h2 class="text-xl font-bold text-neutral-900 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-2 mt-0">
             {{ .name }}
