@@ -413,8 +413,8 @@ Any materials Claude Code can read:
 **Checklist:**
 - [x] Create bundle directory `content/projects/slv-simhestia-future-emissions/`
 - [x] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image (candidates: 3D bar viz equivalent to Lin et al. Fig. 8; Maps on the Hill poster panels)
-- [ ] Verify card renders
+- [x] Place feature image (2040 compact growth scenario panel from Maps on the Hill 2019 poster)
+- [x] Verify card renders
 
 ---
 
