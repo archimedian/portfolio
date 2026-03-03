@@ -404,25 +404,16 @@ Any materials Claude Code can read:
 
 ---
 
-### [ ] CO2 Emissions from Future Land Use Change
-**Era:** UU-GCSC | **Date:** May 2018 | **Flags:** PeerPub, Report+Figs
+### [ ] SimHestia: CO₂ Emissions from Future Land Use Change
+**Era:** UU-GCSC | **Date:** Nov 2018 (Lin et al. 2018) | **Flags:** PeerPub, Report+Figs
+**Slug:** `slv-simhestia-future-emissions` (renamed from planned `co2-land-use-change`)
 
-**Context handoff (fill in before starting):**
-```
-Project description:
-Key findings/outputs:
-Methods used:
-Region/ecosystem:
-Journal and DOI:
-Your specific roles:
-Feature image filename:
-Any materials Claude Code can read:
-```
+**Context handoff:** Provided in session (see session summary). Full handoff block covers project identity, Martin's contributions, outputs, timeline, open items, framing notes.
 
 **Checklist:**
-- [ ] Create bundle directory `content/projects/co2-land-use-change/`
-- [ ] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
-- [ ] Place feature image
+- [x] Create bundle directory `content/projects/slv-simhestia-future-emissions/`
+- [x] Write `index.md`; populate `publications` block; draft body; mark uncertain values `# TODO:`
+- [ ] Place feature image (candidates: 3D bar viz equivalent to Lin et al. Fig. 8; Maps on the Hill poster panels)
 - [ ] Verify card renders
 
 ---
@@ -874,7 +865,7 @@ These structural tasks should be done once, either before or after the project p
 
 The existing card override at `layouts/partials/article-link/card.html` surfaces `region`, `ecosystem`, `methods`, and `sector`. Add `domain`, `era`, and `roles` display as needed. The `publications` field does not need to appear on cards.
 
-### [ ] Implement per-domain project pages via Hugo taxonomy
+### [x] Implement per-domain project pages via Hugo taxonomy
 
 **Decision recorded:** Cross-listing projects across multiple domains creates a double-showing problem on the current single grouped page. Per-domain pages solve this: a project appearing under both Conservation Science and Urban Planning signals "this work spanned two areas" rather than looking like a duplication error. Per-domain pages also serve different audiences better — a conservation client navigates directly to relevant work without scrolling past transit emissions and real estate analysis.
 
