@@ -1,0 +1,13 @@
+{{/*
+  layouts/domain/list.html
+
+  Suppresses the /domain/ taxonomy list page. All domain navigation is handled
+  via /projects/ (the hub) and /projects/domain/<slug>/ (per-domain term pages).
+  This page is not linked from anywhere; the redirect is a safety net.
+*/}}
+{{ define "main" }}
+  {{ with site.GetPage "/projects" }}
+    <meta http-equiv="refresh" content="0;url={{ .Permalink }}">
+    <p><a href="{{ .Permalink }}">Projects</a></p>
+  {{ end }}
+{{ end }}

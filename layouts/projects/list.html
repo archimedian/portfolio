@@ -1,13 +1,15 @@
 {{/*
   layouts/projects/list.html
 
-  Overrides _default/list.html for the projects section only.
-  Groups project cards by the `domain` front matter field in canonical order.
-  `domain` is always a YAML list; multi-domain projects appear under each
-  matching heading. Projects with no recognized domain fall into an "Other"
-  group at the end. Within each group, cards are sorted newest-first by date.
+  Domain hub page for /projects/.
+  Renders a tile grid — one tile per domain that has at least one project —
+  each linking to its taxonomy term page at /projects/domain/<slug>/.
 
-  Canonical domain order mirrors the order in projects-todo.md:
+  Domain taxonomy is declared in hugo.toml; term pages are generated
+  automatically from `domain` front matter. Project counts are read from
+  site.Taxonomies.domain at build time.
+
+  Canonical domain order:
     1. Conservation Science
     2. Urban Ecology
     3. International Development
@@ -18,73 +20,68 @@
 {{ define "main" }}
   {{ .Scratch.Set "scope" "list" }}
 
-  {{/* Header */}}
   <header>
     {{ if .Params.showBreadcrumbs | default (site.Params.list.showBreadcrumbs | default false) }}
       {{ partial "breadcrumbs.html" . }}
     {{ end }}
     <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
-    <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
-      {{ partial "article-meta/list.html" (dict "context" . "scope" "single") }}
-    </div>
   </header>
 
-  {{/* Section description from _index.md body (if any) */}}
   {{ with .Content }}
-    <section class="mt-0 prose max-w-full dark:prose-invert mb-10">
+    <section class="mt-1 mb-10 prose max-w-full dark:prose-invert">
       <div class="min-w-0 min-h-0 max-w-prose w-full">
         {{ . }}
       </div>
     </section>
   {{ end }}
 
-  {{ $allPages := .Pages }}
+  {{ $domainTax := index site.Taxonomies "domain" }}
 
-  {{ if gt (len $allPages) 0 }}
+  {{ $domains := slice
+      (dict
+        "name" "Conservation Science"
+        "slug" "conservation-science"
+        "desc" "Wildlife habitat assessment, remote sensing, and conservation GIS.")
+      (dict
+        "name" "Urban Ecology"
+        "slug" "urban-ecology"
+        "desc" "Emissions inventories, hydrology, and riparian ecosystems in urbanizing landscapes.")
+      (dict
+        "name" "International Development"
+        "slug" "international-development"
+        "desc" "Geospatial survey and mapping in support of international development programs.")
+      (dict
+        "name" "Urban Planning"
+        "slug" "urban-planning"
+        "desc" "Land use analysis, scenario planning, and policy-relevant spatial analysis.")
+      (dict
+        "name" "Economic Development"
+        "slug" "economic-development"
+        "desc" "Market analysis and location intelligence.")
+      (dict
+        "name" "Real Estate Development"
+        "slug" "real-estate-development"
+        "desc" "Site selection and market research.") }}
 
-    {{ $domains := slice
-        "Conservation Science"
-        "Urban Ecology"
-        "International Development"
-        "Urban Planning"
-        "Economic Development"
-        "Real Estate Development" }}
-
+  <section class="w-full grid gap-6 sm:grid-cols-2 mt-8">
     {{ range $domains }}
-      {{ $domain := . }}
-      {{ $group := where $allPages ".Params.domain" "intersect" (slice $domain) }}
-      {{ if gt (len $group) 0 }}
-        <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
-          {{ $domain }}
-        </h2>
-        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {{ range $group.ByDate.Reverse }}
-            {{ partial "article-link/card.html" . }}
-          {{ end }}
-        </section>
+      {{ $pages := index $domainTax (strings.ToLower .name) }}
+      {{ $count := len $pages }}
+      {{ if gt $count 0 }}
+        <a href="{{ printf "/projects/domain/%s/" .slug | relURL }}"
+           class="group block rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-6 hover:border-primary-500 dark:hover:border-primary-400 transition-colors no-underline">
+          <h2 class="text-xl font-bold text-neutral-900 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-2 mt-0">
+            {{ .name }}
+          </h2>
+          <p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4 mt-0">
+            {{ .desc }}
+          </p>
+          <span class="text-xs text-neutral-400 dark:text-neutral-500">
+            {{ $count }} {{ if eq $count 1 }}project{{ else }}projects{{ end }}
+          </span>
+        </a>
       {{ end }}
     {{ end }}
-
-    {{/* Projects with no recognized domain — complement of all grouped pages */}}
-    {{ $recognized := where $allPages ".Params.domain" "intersect" $domains }}
-    {{ $ungrouped := $allPages | complement $recognized }}
-    {{ if gt (len $ungrouped) 0 }}
-      <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
-        Other
-      </h2>
-      <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {{ range $ungrouped.ByDate.Reverse }}
-          {{ partial "article-link/card.html" . }}
-        {{ end }}
-      </section>
-    {{ end }}
-
-  {{ else }}
-    <section class="mt-10 prose dark:prose-invert">
-      <p class="py-8 border-t">
-        <em>{{ i18n "list.no_articles" | emojify }}</em>
-      </p>
-    </section>
-  {{ end }}
+  </section>
 
 {{ end }}
