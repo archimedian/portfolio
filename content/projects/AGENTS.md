@@ -60,3 +60,50 @@ Blowfish resolves this via `resources.Get`, which applies Hugo Pipes image optim
 2. Place the feature image at `assets/images/projects/<slug>/feature.<ext>`.
 3. Set `featureimage: "images/projects/<slug>/feature.<ext>"` in the front matter.
 4. Populate all front matter fields (no TODOs left for production entries).
+
+## Content Development Pipeline
+
+Project page content is developed in the Claude web interface through a structured discovery and drafting process. Claude Code sessions receive finished, approved `index.md` files only.
+
+**Do not draft, edit, or generate project page content in Claude Code sessions.**
+
+### Receiving a New Project Page
+
+When Martin delivers a finished `index.md`:
+
+1. Verify the slug matches an entry in `we-inventory.md` (Layer 2 project file)
+2. Create `content/projects/<slug>/` and place `index.md` inside it
+3. Verify feature image exists at `assets/images/projects/<slug>/feature.<ext>` — if absent, flag to Martin before committing
+4. Run `hugo --buildDrafts` and confirm clean build
+5. Commit: `add project page: <slug> (WENNN)`
+
+### Per-WE Discovery Files
+
+For any project page where you need background context (role, methods, findings, artifact inventory), load the corresponding `weNNN-slug.md` from Claude.ai project files. Do not infer content from the Hugo front matter alone — the discovery file is the authoritative record.
+
+### Front Matter Schema
+
+The schema is defined in this file's "Front Matter Schema" section above. Do not add or rename fields without explicit confirmation from Martin — changes require updating every file in this section.
+
+Feature images live at `assets/images/projects/<slug>/feature.<ext>` — not inside the page bundle. The `featureimage` front matter field references a path relative to `assets/`.
+
+### Domain Values
+
+The `domain` front matter field is a **YAML list** accepting one or more values. Valid values (exactly as written):
+
+- Conservation Science
+- Urban Ecology
+- Urban Planning
+- International Development
+- Economic Development
+- Real Estate Development
+
+Example for a multi-domain project:
+
+```yaml
+domain:
+  - Conservation Science
+  - Urban Planning
+```
+
+Cross-listed projects should list domains in order of primary to secondary. The card partial and any future domain-filtering logic depend on consistent spelling of these values.
