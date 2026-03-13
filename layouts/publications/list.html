@@ -11,7 +11,7 @@
       {{ $doi := .Params.doi }}
       {{ $pdf := .Params.pdf }}
       {{ $alturl := .Params.alturl }}
-      {{ $primaryLink := cond (ne $alturl "") $alturl (cond (ne $doi "") (printf "https://doi.org/%s" $doi) "") }}
+      {{ $primaryLink := cond $alturl $alturl (cond $doi (printf "https://doi.org/%s" $doi) "") }}
       <div class="prose dark:prose-invert max-w-full border-b border-neutral-200 dark:border-neutral-700 pb-5">
         <p class="mb-1">
           {{ if $primaryLink }}
@@ -24,7 +24,7 @@
           {{ with .Params.journal }}<em>{{ . }}</em>{{ end }}
           {{ with .Params.year }}({{ . }}){{ end }}
           {{ if $doi }}
-            &middot; <a href="{{ $primaryLink }}" class="text-xs" target="_blank" rel="noopener">{{ cond (ne $alturl "") "Link" "DOI" }}</a>
+            &middot; <a href="{{ $primaryLink }}" class="text-xs" target="_blank" rel="noopener">{{ cond $alturl "Link" "DOI" }}</a>
           {{ end }}
           {{ if $pdf }}
             &middot; <a href="{{ $pdf }}" class="text-xs" target="_blank" rel="noopener">PDF</a>
