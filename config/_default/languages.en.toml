@@ -8,7 +8,7 @@ title = "Martin Buchert"
 [params.author]
   name = "Martin Buchert"
   image = "img/profile.jpg"   # Place author photo at assets/img/profile.jpg
-  headline = "TODO: Headline — e.g. Geospatial Analyst & Conservation Planner"
+  headline = "Conservation Planner · Geographer · Spatial Analyst"
   bio = "TODO: One or two sentence bio."
   links = [
     { linkedin = "https://www.linkedin.com/in/martinbuchert/" },
