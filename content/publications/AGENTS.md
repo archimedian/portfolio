@@ -10,13 +10,15 @@ Publications use flat Markdown files, not page bundles. There are no single-page
 
 ## Front Matter Schema
 
-The schema is finalized. Required fields: `title`, `year`, `journal`, `doi`. Optional field: `pdf` (root-relative path to a file in `static/`, e.g. `/pdf/buchert-2024.pdf`; leave blank if unavailable).
+Required fields: `title`, `year`, `journal`, `doi`. Optional fields:
+- `pdf` — root-relative path to a file in `static/`, e.g. `/pdf/buchert-2024.pdf`; leave blank if unavailable.
+- `alturl` — override link for entries whose DOI is dead or unregistered. When present, the title and inline label link to this URL instead of `https://doi.org/<doi>`. The `doi` field should still be populated for citation integrity. Example: `alturl: "https://digitalcommons.lmu.edu/cate/vol9/iss1/5/"`.
 
 Do not rename or add fields without explicit confirmation — changes require updating every file in this section.
 
 ## List Template Override
 
-The list template override (when implemented) lives at `layouts/publications/list.html` at the project root. It renders a bibliography-style list without card layout. Until that override exists, Blowfish's default list view is used. This is a known gap, not a missing decision.
+The list template override lives at `layouts/publications/list.html` at the project root. It renders a bibliography-style list (no cards, no links to single pages), sorted by `year` front matter descending. Each entry shows: title linked to the primary URL, journal, year, DOI/Link label, and PDF link when present. The primary link resolves to `alturl` if set, otherwise to `https://doi.org/<doi>`.
 
 ## No Single Pages
 

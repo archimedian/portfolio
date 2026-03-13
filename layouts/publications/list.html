@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <header>
+    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  {{ $pubs := where .Pages "Params.year" "ne" nil }}
+  {{ $sorted := sort $pubs "Params.year" "desc" }}
+
+  <section class="mt-8 space-y-5">
+    {{ range $sorted }}
+      {{ $doi := .Params.doi }}
+      {{ $pdf := .Params.pdf }}
+      {{ $alturl := .Params.alturl }}
+      {{ $primaryLink := cond (ne $alturl "") $alturl (cond (ne $doi "") (printf "https://doi.org/%s" $doi) "") }}
+      <div class="prose dark:prose-invert max-w-full border-b border-neutral-200 dark:border-neutral-700 pb-5">
+        <p class="mb-1">
+          {{ if $primaryLink }}
+            <a href="{{ $primaryLink }}" class="font-semibold" target="_blank" rel="noopener">{{ .Title }}</a>
+          {{ else }}
+            <span class="font-semibold">{{ .Title }}</span>
+          {{ end }}
+        </p>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-0">
+          {{ with .Params.journal }}<em>{{ . }}</em>{{ end }}
+          {{ with .Params.year }}({{ . }}){{ end }}
+          {{ if $doi }}
+            &middot; <a href="{{ $primaryLink }}" class="text-xs" target="_blank" rel="noopener">{{ cond (ne $alturl "") "Link" "DOI" }}</a>
+          {{ end }}
+          {{ if $pdf }}
+            &middot; <a href="{{ $pdf }}" class="text-xs" target="_blank" rel="noopener">PDF</a>
+          {{ end }}
+        </p>
+      </div>
+    {{ end }}
+  </section>
+{{ end }}
